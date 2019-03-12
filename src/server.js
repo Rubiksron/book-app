@@ -12,7 +12,7 @@ const bookApp = require(`./routes/book-app-${DB}.js`);
 // Application Setup & Exports
 const app = express();
 const server = {
-  start: (port=process.env.PORT) => app.listen(port, () => console.log('Server is up on port: ', port))
+  start: (port=process.env.PORT || 3000) => app.listen(port, () => console.log('Server is up on port: ', port))
 };
 module.exports = {app,server};
 
